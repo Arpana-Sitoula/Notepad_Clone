@@ -1,4 +1,4 @@
-package Notepad;
+package GUI;
 import javax.swing.*;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
