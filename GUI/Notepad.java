@@ -2,6 +2,7 @@ package GUI;
 import javax.swing.*;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
+
 import javax.swing.event.DocumentEvent;
 
 
@@ -14,14 +15,16 @@ public class Notepad {
         JMenu File,Edit,Format,View,Help;
         JMenu zoom;
         JMenuItem New, NewWindow, Open, Save, SaveAs, Pagesetup, print, exit;
+        JMenuItem Undo,Cut,Copy,Paste,Delete,Search,Find,FindN,FindP,Replace,Goto,Select,DateTime;
         JMenuItem wordwrap, font;
         JMenuItem zoomin, zoomout, statusbar;
         JMenuBar mb = new JMenuBar();
         JTextArea area = new JTextArea();
         JLabel col = new JLabel();
         JLabel row = new JLabel();
-    
-    
+
+
+            
         col.setBounds(0,400,500,30);
         f.add(col);
         row.setBounds(50,400,500,30);
@@ -82,6 +85,22 @@ public class Notepad {
         Pagesetup = new JMenuItem("Page Setup...");
         print = new JMenuItem("Print...");
         exit = new JMenuItem("Exit");
+
+       
+        //Inside Edit
+         Undo = new JMenuItem("Undo");
+         Cut = new JMenuItem("Cut");
+         Copy = new JMenuItem("Copy");
+         Paste = new JMenuItem("Paste");
+         Delete = new JMenuItem("Delete");
+         Search = new JMenuItem("Search with Bing...");
+         Find = new JMenuItem("Find...");
+         FindN = new JMenuItem("Find Next");
+         FindP = new JMenuItem("Find Previous");
+         Replace = new JMenuItem("Replace...");
+         Goto = new JMenuItem("Go To...");
+         Select = new JMenuItem("Select All");
+         DateTime = new JMenuItem("Time/Date");
     
         //Inside Format
         wordwrap = new JMenuItem("Word Wrap");
@@ -105,6 +124,21 @@ public class Notepad {
         File.add(Pagesetup);
         File.add(print);
         File.add(exit);
+
+        Edit.add(Undo);
+        Edit.add(Cut);
+        Edit.add(Copy);
+        Edit.add(Paste);
+        Edit.add(Delete);
+        Edit.add(Search);
+        Edit.add(Find);
+        Edit.add(FindN);
+        Edit.add(FindP);
+        Edit.add(Replace);
+        Edit.add(Goto);
+        Edit.add(Select);
+        Edit.add(DateTime); 
+
     
         Format.add(wordwrap);
         Format.add(font);
