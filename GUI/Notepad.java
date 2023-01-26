@@ -18,6 +18,7 @@ public class Notepad {
         JMenuItem Undo,Cut,Copy,Paste,Delete,Search,Find,FindN,FindP,Replace,Goto,Select,DateTime;
         JMenuItem wordwrap, font;
         JMenuItem zoomin, zoomout, statusbar;
+        JMenuItem viewh, sendf,about;
         JMenuBar mb = new JMenuBar();
         JTextArea area = new JTextArea();
         JLabel col = new JLabel();
@@ -119,6 +120,9 @@ public class Notepad {
         statusbar = new JMenuItem("Status Bar");
     
         //Inside Help
+        viewh = new JMenuItem("View Help");
+        sendf = new JMenuItem("Send Feedback");
+        about = new JMenuItem("About Notepad");
     
     
         File.add(New);
@@ -153,6 +157,10 @@ public class Notepad {
     
         zoom.add(zoomin);
         zoom.add(zoomout);
+
+        Help.add(viewh);
+        Help.add(sendf);
+        Help.add(about);
     
         mb.add(File);
         mb.add(Edit);
