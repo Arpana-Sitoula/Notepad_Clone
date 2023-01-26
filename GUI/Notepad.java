@@ -52,8 +52,13 @@ public class Notepad {
             }
         
             private void updateCharCount() {
-                int charCount = area.getText().length();
-            col.setText("Col: " + charCount);
+                try{
+                    int charCount = area.getText().length();
+                    col.setText("Col: " + charCount);
+                }catch(Error e){
+                    e.printStackTrace();
+                }
+               
             }
     
             private void updateLineNum(){
