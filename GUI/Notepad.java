@@ -1,5 +1,6 @@
 package GUI;
 import javax.swing.*;
+import java.awt.*;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
 
@@ -10,7 +11,6 @@ public class Notepad {
     Notepad(){
         JFrame f = new JFrame();
         f.setTitle("Notepad");
-        f.setSize(600,600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenu File,Edit,Format,View,Help;
         JMenu zoom;
@@ -24,13 +24,14 @@ public class Notepad {
         JLabel col = new JLabel();
         JLabel row = new JLabel();
 
-
+        col.setLayout(new BorderLayout(30,30));
+        f.add(col,BorderLayout.SOUTH);
+        row.setLayout(new BorderLayout(80,95));
+        f.add(row,BorderLayout.SOUTH);
+        
             
-        col.setBounds(0,400,500,30);
-        f.add(col);
-        row.setBounds(50,400,500,30);
-        f.add(row);
-        area.setBounds(0,0,500,400);
+        
+        area.setBounds(0,0,1600,1500);
         f.add(area);
     
         area.getDocument().addDocumentListener(new DocumentListener() {
@@ -171,7 +172,6 @@ public class Notepad {
         f.setJMenuBar(mb);
     
         f.setSize(500,500);
-        f.setLayout(null);
         f.setVisible(true);
         
       }  
